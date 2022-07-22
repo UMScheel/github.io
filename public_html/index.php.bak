@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Web page of Tallys Yunes" />
+<meta name="keywords" content="operations,research,integer,constraint,mathematical,programming,integration,hybrid,combinatorial,optimization,scheduling,logistics,heuristic,neighborhood,simpl,university,miami,management,science" />
+<meta name="author" content="Tallys Yunes / Original design: Andreas Viklund - http://andreasviklund.com/" />
+<link rel="stylesheet" type="text/css" href="mycss.css" media="screen,projection" />
+<link rel="stylesheet" type="text/css" href="print.css" media="print" />
+<title>Tallys Yunes</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4942624-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+<div id="wrap">
+
+<?php include("common.html"); ?>
+
+<div id="content">
+<h2>Short Bio</h2>
+<p>
+I grew up in the beautiful city of Rio de Janeiro in Brazil,
+where I stayed until finishing high-school.
+From there I moved to the city of
+Campinas, in the state of S&atilde;o Paulo,
+where I received a Bachelor's degree in Computer Engineering and a
+Master's degree in Computer Science from the State University of Campinas (<A
+HREF="http://www.unicamp.br">UNICAMP</A>).
+While at UNICAMP, I was introduced to
+<A HREF="http://www.scienceofbetter.org">Operations
+Research</A> by a professor who is now a great friend of mine.
+I fell in love with the subject and I decided to steer my career toward
+using analytical methods to help people make better decisions.
+This led me to western Pennsylvania, where I received a Ph.D. degree
+from Carnegie Mellon University's
+<A HREF="http://www.tepper.cmu.edu">Tepper School of Business</A>.
+I have been a member of the UM faculty since the Fall of 2005.
+<P>
+My <A HREF="yunes-cv.pdf" onMouseOver="window.status='Curriculum Vitae'; return true">Curriculum Vit&aelig;</A> contains more
+information, including a complete list of publications, working papers, talks, teaching
+experience, and consulting activities.
+<p>
+
+<h2>Research Interests</h2>
+<p>
+I am interested in solving optimization problems that arise from
+a variety of practical applications, such as:
+product line simplification,
+scheduling (sports, crews, call centers, manufacturing),
+political districting,
+information display on maps,
+routing and transportation, location,
+and operations management in general.
+In order to address such problems, I use
+<A HREF="http://analytics-magazine.com/?p=1476">Prescriptive Analytics</A>
+or, more specifically, tools
+from the fields of <A HREF="http://www.scienceofbetter.org">Operations Research</A> (OR) and <A
+HREF="http://kti.ms.mff.cuni.cz/~bartak/constraints/">Constraint Programming</A> (CP). 
+These tools are essentially mathematical models that contain a
+simplified (but still useful) representation of the actual problem in
+a way that can be treated (i.e. solved) by a computer.
+<P>
+Sometimes, standard techniques for solving OR and CP models
+are not able to satisfactorily handle the problem at hand, when
+considered in isolation.
+Hence, part of my research focuses on developing the theory and
+facilitating the implementation of optimization algorithms
+that integrate multiple solution techniques.
+The Spring 2006 issue of the <A HREF="http://www.tepper.cmu.edu/news-multimedia/tepper-magazine/index.aspx">Tepper Magazine</A>
+has <a href="docs/tepper-magazine-spring06-simpl.pdf">an article on this topic</a> entitled
+"<I>Two disciplines join to optimize solutions to enterprise-wide problems</I>".
+To have an idea of what integrated optimization can do for you, take a look at
+some <a href="integrated.php" onMouseOver="window.status='Success stories'; return true">success stories</a>.
+<p>
+More recently, I've also studied ways to simplify product lines while
+finding a profitable balance between customer satisfaction and
+complexity costs, which include costs related to manufacturing, marketing,
+training, etc. The Spring 2008 issue of the
+<a href="http://www.bus.miami.edu/news-and-media/publications/bus-miami-mag/index.html">BusinessMiami Magazine</a>
+has <a href="docs/businessmiami-magazine-spring08-customization.pdf">an article on this topic</a>
+entitled "<i>The Costs of Customization</i>".
+<p>
+
+<br>
+
+<h2>Ph.D. Program in Management Science/Operations Research</h2>
+<p>
+Our department has recently started accepting applications to the PhD program in Management Science/Operations Research.
+The School of Business Administration at the University of Miami offers a challenging and stimulating work environment, talented faculty committed to high quality research, and world-class facilities.
+For more information, go to <a href="http://www.bus.miami.edu/phd-programs/index.html">this page</a>.
+<p>
+
+</div>
+
+<?php include("footer.html"); ?>
+
+<center>
+
+<a href="http://t.extreme-dm.com/?login=thyunes"
+target="_top"><img src="http://t1.extreme-dm.com/i.gif"
+name="EXim" border="0" height="38" width="41"
+alt="eXTReMe Tracker" align=""></img></a>
+<script type="text/javascript" language="javascript1.2"><!--
+EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+EXb=EXs.colorDepth:EXb=EXs.pixelDepth;//-->
+</script><script type="text/javascript"><!--
+var EXlogin='thyunes' // Login
+var EXvsrv='s9' // VServer
+navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+EXd.write("<img src=\"http://e0.extreme-dm.com",
+"/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+"jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+"l="+escape(EXd.referrer)+"\" height=1 width=1>");//-->
+</script><noscript><img height="1" width="1" alt=""
+src="http://e0.extreme-dm.com/s9.g?login=thyunes&amp;j=n&amp;jv=n"/>
+</noscript>
+
+</center>
+
+<!--
+<EMBED src="http://lads.myspace.com/mini/mini.swf?b=MTEyNjg1OTE=&o=NDcxNzU1Mzc=&d=MTE1MjM5ODAxMA==&u=aHR0cDovL211c2ljcGxheWVyLm15c3BhY2UuY29tLw==&i=Nzg0OTY2Njc=&a=VHJ1ZQ==" quality=high WIDTH="295" HEIGHT="51" NAME="mp3player" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+-->
+
+</div>
+
+</body>
+</html>

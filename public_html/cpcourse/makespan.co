@@ -1,0 +1,105 @@
+// Run this model from the command line, NOT inside CometStudio
+// Usage: comet makespan.co -f<datafile>
+
+import cotfd;
+
+// Read command-line parameters
+int nargs = System.argc();
+string [] args = System.getArgs();
+string filename = " ";
+
+forall (i in 2..nargs) {
+  if (args[i-1].prefix(2).equals("-f"))
+    filename = args[i-1].suffix(2);
+}
+
+// Open input data file
+ifstream datafile(filename);
+if (! datafile.good()) {
+  cout << "Can't open input file " << filename << endl;
+  cout << "Usage: comet makespan.co -f<data file>" << endl;
+  System.exit(0);
+}
+
+// Read data from input file
+int N = datafile.getInt();   // number of jobs
+int T = datafile.getInt();   // time horizon
+int Cap = datafile.getInt(); // machine capacity
+
+range Jobs = 1..N;
+
+int P[Jobs];  // processing time
+int R[Jobs];  // release date
+int D[Jobs];  // due date
+int C[Jobs];  // resource consumption
+int W[Jobs];  // weight
+
+forall (j in Jobs) {
+  P[j] = datafile.getInt();
+  R[j] = datafile.getInt();
+  D[j] = datafile.getInt();
+  C[j] = datafile.getInt();
+  W[j] = datafile.getInt();
+}
+
+// A Scheduler is a special type of Solver that
+// implements scheduling-specific filtering
+Scheduler<CP> cp(T);
+
+// Special type of object for job scheduling: Activity
+// Each Activity encapsulates 3 variables: start(),
+// end(), and duration()
+Activity<CP> act[j in Jobs](cp,P[j]);
+Activity<CP> makespan(cp,0);
+
+// Disjunctive machine (1 job at a time)
+//UnaryResource<CP> machine(cp);
+
+// Cumulative (parallel) machine with capacity = Cap
+DiscreteResource<CP> machine(cp,Cap);
+
+// Set a limit on run time
+cp.limitTime(3600);
+
+// Save current start time to calculate execution time later
+int t0 = System.getCPUTime();
+
+minimize<cp> makespan.start()
+subject to {
+  forall (j in Jobs) {
+    act[j].precedes(makespan);
+
+    // For unary resources, the second parameter below isn't needed
+    act[j].requires(machine,C[j]);
+
+    cp.post( act[j].start() >= R[j] );
+    cp.post( act[j].end() <= D[j] );
+  }
+}
+using {
+  // A specific labeling heuristic; good for job scheduling
+  // See Comet Tutorial Section 16.3.2, page 286
+  setTimes(act);
+
+  // Fix the start time of the makespan activity to its minimum
+  // possible value after all activities in act have been scheduled
+  // by the call to setTimes shown above
+  makespan.scheduleEarly();
+
+  cout << endl << "makespan: " << makespan.start() << endl;
+  cout << "time: " << (System.getCPUTime() - t0)/1000 << " secs" << endl;
+  cout << "fail: " << cp.getNFail() << endl;
+}
+
+cout << endl << "Total time: " << (System.getCPUTime() - t0)/1000 << endl;
+cout << "Total fail: " << cp.getNFail() << endl;
+
+if (cp.getSolution() != null) {
+  cout << "Makespan = " << makespan.start() << endl;
+  cout << "Start times:" << endl;
+  forall (j in Jobs)
+    cout << "s[" << j << "] = " << act[j].start() << endl;
+}
+else{
+  cout << "No solution found." << endl;
+}

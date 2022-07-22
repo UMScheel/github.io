@@ -1,0 +1,19 @@
+Rare-event Simulation for Heavy-tailed Multi-server Queues
+
+Jingchen Liu
+
+In this talk, I will discuss the first provably efficient simulation algorithm for steady-state 
+estimation of long delays in a positive recurrent two-server (G/G/2) queue with 
+heavy-tailed service requirement. Long delays are usually caused by one or two customers 
+(depending on the traffic intensity) who have extremely large service requirement and 
+block the servers for long time. We propose a three-step program to design the algorithm 
+and prove its efficiency. First, we adopt a mixture family of changes-of-measure; second, 
+propose an appropriate Lyapunov inequality to control the variance of our estimator; third, 
+construct a Lyapunov function (the solution to the Lyapunov inequality) and tune various 
+parameters to verify the inequality. Because of the upper bound provided by the 
+Lyapunov function, our method also suggests an asymptotic approximation of the 
+rare-event probability. Therefore, rare-event simulation and large deviations analysis for 
+heavy-tailed models are connected naturally. Our strategy including the mixture family, 
+the construction of Lypunov function, and proof techniques can solve a large class of 
+problems. We shall also mention other large deviations problems involving 
+multidimensional heavy-tailed models for which our program can be successfully applied.
